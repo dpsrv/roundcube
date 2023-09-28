@@ -1,11 +1,13 @@
 services:
   roundcube:
-    image: roundcube/roundcubemail:latest
+    image: roundcube/roundcubemail:1.6.3-apache
     container_name: roundcube
     env_file: ${DPSRV_HOME}/rc/secrets/roundcube/roundcube.env
     ports:
       - 9000:9000
     volumes:
+      - ${DPSRV_HOME}/rc/secrets/roundcube/config/:/var/roundcube/config/:ro
+      - ${DPSRV_HOME}/rc/secrets/roundcube/roundcube-defaults.ini:/usr/local/etc/php/conf.d/roundcube-defaults.ini:ro
       - ${DPSRV_HOME}/srv/www/roundcube/:/var/www/html/
       - /etc/localtime:/etc/localtime:ro
     restart: unless-stopped

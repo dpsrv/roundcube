@@ -5,7 +5,7 @@
 
 If hostnames do not match the SSL certs, such as a docker aliases, ssl connection will fail.  
 
-Add this to `/var/www/html/config/config.docker.inc.php`.  
+Add this to `$DPSRV_HOME/var/run/roundcube/config/ssl.inc.php`.  
 
 ```
 $config['imap_conn_options'] = [
