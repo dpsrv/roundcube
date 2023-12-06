@@ -6,6 +6,7 @@ services:
     ports:
       - 9000:9000
     volumes:
+      - ${DPSRV_HOME}/rc/secrets/mailserver/config/:/tmp/docker-mailserver/
       - ${DPSRV_HOME}/rc/secrets/roundcube/config/:/var/roundcube/config/:ro
       - ${DPSRV_HOME}/rc/secrets/roundcube/roundcube-defaults.ini:/usr/local/etc/php/conf.d/roundcube-defaults.ini:ro
       - ${DPSRV_HOME}/srv/www/roundcube/:/var/www/html/
