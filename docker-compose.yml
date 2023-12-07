@@ -1,5 +1,5 @@
 services:
-  roundcube:
+  dpsrv-roundcube:
     image: roundcube/roundcubemail:1.6.3-apache
     container_name: dpsrv-roundcube
     env_file:
