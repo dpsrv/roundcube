@@ -2,7 +2,9 @@ services:
   roundcube:
     image: roundcube/roundcubemail:1.6.3-apache
     container_name: dpsrv-roundcube
-    env_file: ${DPSRV_HOME}/rc/secrets/roundcube/roundcube.env
+    env_file:
+      - ${DPSRV_HOME}/rc/secrets/roundcube/roundcube.env
+      - ${DPSRV_HOME}/local.env
     ports:
       - 9000:9000
     volumes:
