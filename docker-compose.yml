@@ -4,7 +4,7 @@ services:
     container_name: dpsrv-roundcube
     env_file:
       - ${DPSRV_HOME}/rc/secrets/roundcube/roundcube.env
-      - ${DPSRV_HOME}/local.env
+      - ${DPSRV_HOME}/rc/secrets/local/${HOSTNAME}/local.env
     ports:
       - 9000:9000
     volumes:
