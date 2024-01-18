@@ -1,7 +1,7 @@
 services:
   dpsrv-roundcube:
+    container_name: dpsrv-roundcube-${tag:-latest}
     image: roundcube/roundcubemail:1.6.3-apache
-    container_name: dpsrv-roundcube
     env_file:
       - ${DPSRV_HOME}/rc/secrets/roundcube/roundcube.env
       - ${DPSRV_HOME}/rc/secrets/local/${HOSTNAME}/local.env
