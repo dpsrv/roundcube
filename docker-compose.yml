@@ -5,7 +5,7 @@ services:
     hostname: $HOSTNAME.dpsrv.me
     env_file:
       - ${DPSRV_HOME}/rc/secrets/roundcube/roundcube.env
-      - ${DPSRV_HOME}/rc/secrets/local/${HOSTNAME}/${HOSTNAME}.env
+      - ${DPSRV_HOME}/local.env
     ports:
       - 9000:9000
     volumes:
